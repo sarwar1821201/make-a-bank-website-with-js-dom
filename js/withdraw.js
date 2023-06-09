@@ -21,11 +21,18 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    const previousBalanceTotalString= balanceTotalElement.innerText;
    const previousBalanceTotal= parseFloat(previousBalanceTotalString);
 
+   withdrawField.value='';
+
+   if(newWithdrawAmount>previousBalanceTotal){
+     alert('you have no sufficient money');
+     return;
+   }
+
    const currentBalanceTotal= previousBalanceTotal - newWithdrawAmount;
    balanceTotalElement.innerText=currentBalanceTotal;
 
 
-   withdrawField.value='';
+   
 
    
 })
