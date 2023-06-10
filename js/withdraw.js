@@ -10,8 +10,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    const previousWithdrawTotalString= withdrawTotalElement.innerText;
    const previousWithdrawTotal= parseFloat(previousWithdrawTotalString);
 
-   const currentWithdrawTotal= previousWithdrawTotal + newWithdrawAmount;
-   withdrawTotalElement.innerText=currentWithdrawTotal;
+   
 
 
    
@@ -27,6 +26,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
      alert('you have no sufficient money');
      return;
    }
+
+   const currentWithdrawTotal= previousWithdrawTotal + newWithdrawAmount;
+   withdrawTotalElement.innerText=currentWithdrawTotal;
 
    const currentBalanceTotal= previousBalanceTotal - newWithdrawAmount;
    balanceTotalElement.innerText=currentBalanceTotal;
